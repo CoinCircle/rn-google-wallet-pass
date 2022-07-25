@@ -9,11 +9,13 @@ npm install rn-google-wallet-pass
 ## Usage
 
 ```js
-import { multiply } from "rn-google-wallet-pass";
+import { isSupported, addWalletPass } from 'rn-google-wallet-pass';
 
 // ...
 
-const result = await multiply(3, 7);
+/* Must call isSupported first as it fetches the client */
+if (await isSupported()) addWalletPass(jsonStringObject);
+// note: isSupported is async as it requires fetching the google pay client
 ```
 
 ## Contributing
