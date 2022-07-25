@@ -1,7 +1,7 @@
 {
   "name": "rn-google-wallet-pass",
   "version": "0.1.0",
-  "description": "test",
+  "description": "React-native wrapper for adding google wallet passes",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -35,13 +35,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/ruslanjabari/rn-google-wallet-pass",
-  "author": "ruslanjabari <rjabari@stanford.edu> (https://github.com/ruslanjabari)",
+  "repository": "https://github.com/CoinCircle/rn-google-wallet-pass",
+  "author": "https://github.com/CoinCircle",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ruslanjabari/rn-google-wallet-pass/issues"
+    "url": "https://github.com/CoinCircle/rn-google-wallet-pass/issues"
   },
-  "homepage": "https://github.com/ruslanjabari/rn-google-wallet-pass#readme",
+  "homepage": "https://github.com/CoinCircle/rn-google-wallet-pass#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -58,6 +58,7 @@
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react-native": "^4.0.0",
     "jest": "^28.1.1",
     "pod-install": "^0.1.0",
     "prettier": "^2.0.5",

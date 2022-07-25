@@ -1,18 +1,22 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'rn-google-wallet-pass';
+import { StyleSheet, View, Button, Alert } from 'react-native';
+import { isSupported, addWalletPass } from 'rn-google-wallet-pass';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  const handleAddPass = () => {
+    const json = ``;
+    if (!json) return;
+    addWalletPass(json);
+  };
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Button
+        title="IsPassSupported"
+        onPress={async () => Alert.alert(`${await isSupported()}`)}
+      />
+      <Button title="AddPass" onPress={handleAddPass} />
     </View>
   );
 }
@@ -21,11 +25,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+    justifyContent: 'space-around',
   },
 });
