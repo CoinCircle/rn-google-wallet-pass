@@ -1,6 +1,14 @@
 # rn-google-wallet-pass
 A minimal wrapper around Google's pay client that allows to save google wallet passes to an android device
+
+
+https://user-images.githubusercontent.com/59275080/180892413-66e94f60-3233-4adf-b755-e7c6f71cbdc0.mp4
+
+
+
+
 ## Installation
+### note: this is a native module for Android only (not supported with expo managed workflow)
 
 ```sh
 npm install rn-google-wallet-pass
