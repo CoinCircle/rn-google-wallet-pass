@@ -34,7 +34,7 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 
 ## Helpful resources:
 [PayClient api](https://developers.google.com/android/reference/com/google/android/gms/pay/PayClient) (This is the Android SDK API)
-[Google IO Reveal] (https://www.youtube.com/watch?v=2gTCghy-dU4) (helpful intro)
+[Google IO Reveal](https://www.youtube.com/watch?v=2gTCghy-dU4) (helpful intro)
 ## License
 
 MIT
