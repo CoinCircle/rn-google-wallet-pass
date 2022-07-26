@@ -14,7 +14,7 @@ import kotlin.random.Random
 
 
 class RnGoogleWalletPassModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
-    
+
     private var reactContext: ReactApplicationContext = reactContext;
     private lateinit var walletClient: PayClient;
     private var addToGoogleWalletRequestCode: Int = 0
@@ -43,10 +43,10 @@ class RnGoogleWalletPassModule(reactContext: ReactApplicationContext) : ReactCon
     fun addWalletPass(jsonObject: String): Int {
         val activity = currentActivity
         if (activity != null && this.walletClient != null) {
-            this.walletClient.savePasses(newObjectJson, activity, this.addToGoogleWalletRequestCode)
+            this.walletClient.savePasses(jsonObject, activity, this.addToGoogleWalletRequestCode)
             return this.addToGoogleWalletRequestCode;
         };
         return -1;
     }
-    
+
 }
