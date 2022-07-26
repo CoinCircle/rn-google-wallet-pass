@@ -8,10 +8,6 @@ import com.facebook.react.bridge.Promise
 import com.google.android.gms.pay.PayApiAvailabilityStatus
 import com.google.android.gms.pay.Pay
 import com.google.android.gms.pay.PayClient
-import java.util.*
-import kotlin.random.Random
-
-
 
 class RnGoogleWalletPassModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
 
@@ -40,13 +36,23 @@ class RnGoogleWalletPassModule(reactContext: ReactApplicationContext) : ReactCon
     }
 
     @ReactMethod
-    fun addWalletPass(jsonObject: String): Int {
+    fun addWalletPass(passObject: String): Int {
         val activity = currentActivity
         if (activity != null && this.walletClient != null) {
-            this.walletClient.savePasses(jsonObject, activity, this.addToGoogleWalletRequestCode)
+            this.walletClient.savePasses(passObject, activity, this.addToGoogleWalletRequestCode);
             return this.addToGoogleWalletRequestCode;
         };
         return -1;
+    }
+
+    @ReactMethod
+    fun addWalletPassJWT(passJWTObject: String): Int {
+      val activity = currentActivity
+      if (activity != null && this.walletClient != null) {
+        this.walletClient.savePassesJwt(passJWTObject, activity, this.addToGoogleWalletRequestCode);
+        return this.addToGoogleWalletRequestCode;
+      };
+      return -1;
     }
 
 }
